@@ -437,16 +437,17 @@ class SplashyActivity : AppCompatActivity() {
     }
 
     internal fun hideSplashy() {
-        //  instance.finishAffinity()
         if (onComplete != null) {
             onComplete?.onComplete()
 
         }
-
+        finish()
     }
 
 
-    override fun onBackPressed() {}
+    override fun onBackPressed() {
+        //finish()
+    }
 
 
 }
