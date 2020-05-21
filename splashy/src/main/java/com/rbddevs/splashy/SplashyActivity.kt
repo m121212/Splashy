@@ -441,14 +441,14 @@ class SplashyActivity : AppCompatActivity() {
             if (onComplete != null) {
                 onComplete?.onComplete()
             }
+            println("calling finish")
             finish()
+            println("finished")
         }, 0)
         //if (onComplete != null) {
             //onComplete?.onComplete()
         //}
-        //println("calling finish");
         //finish()
-        //println("finished");
     }
 
 
