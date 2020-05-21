@@ -437,11 +437,18 @@ class SplashyActivity : AppCompatActivity() {
     }
 
     internal fun hideSplashy() {
-        if (onComplete != null) {
-            onComplete?.onComplete()
-
-        }
-        finish()
+        Handler().postDelayed({
+            if (onComplete != null) {
+                onComplete?.onComplete()
+            }
+            finish()
+        }, 0)
+        //if (onComplete != null) {
+            //onComplete?.onComplete()
+        //}
+        //println("calling finish");
+        //finish()
+        //println("finished");
     }
 
 
